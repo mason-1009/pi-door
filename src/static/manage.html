@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>STEM Door Control</title>
+        <link rel="stylesheet" href="/static/style/manage.css" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>STEM Door Control</h1>
+        </div>
+        <div id="content-flexbox">
+            <div class="action-content-box" onclick="sendUnlockSignal();">
+                <h2>Unlock</h2>
+            </div>
+            <div class="action-content-box" onclick="sendLockSignal();">
+                <h2>Lock</h2>
+            </div>
+            <div class="action-content-box" onclick="sendAutolockToggleSignal();">
+                <h2>Toggle Auto Door Lock</h2>
+            </div>
+            <div class="action-content-box">
+                <h2>Take Picture</h2>
+            </div>
+            <div class="action-content-box">
+                <h2>Reset Message</h2>
+            </div>
+            <div class="action-content-box" onclick="setMessageField(true);">
+                <h2>Send Message</h2>
+            </div>
+            <div class="action-content-box" onclick="toggleInfoVisibility();">
+                <h2>Show Info</h2>
+            </div>
+            <div class="info-content-box" id="main-info-box">
+                <h3>The temperature is <span id="info-temp">unset</span> degrees.</h3>
+                <h3>The door is <span id="info-door">unset</span> and <span id="info-lock">unset</span>.</h3>
+                <h3>Auto-lock is set to <span id="info-autolock">unset</span>.</h3>
+            </div>
+        </div>
+        <div id="popup-area">
+            <div id="password-area">
+                <h3>Enter Password</h3>
+                <input type="password" id="passfield">
+                <button id="password-submit" onclick="submitPassword();">Authenticate</button>
+            </div>
+            <div id="message-area">
+                <h3>Enter Message</h3>
+                <input id="messagefield">
+                <button id="message-submit" onclick="submitMessage();">Send</button>
+        </div>
+    <script src="/static/scripts/manage.js"></script>
+    </body>
+</html>

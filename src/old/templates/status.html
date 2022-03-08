@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>A.I. Entry Info</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts.css') }}">
+        <style type="text/css">
+            @font-face {
+                font-family: 'Overpass';
+                src: url("{{ url_for('static', filename='fonts/overpass-regular.ttf') }}");
+            }
+
+
+            @font-face {
+                font-family: 'Overpass-Light';
+                src: url("{{ url_for('static', filename='fonts/overpass-light.ttf') }}");
+            }
+
+            @font-face {
+                font-family: 'Overpass-Thin';
+                src: url("{{ url_for('static', filename='fonts/overpass-thin.ttf') }}");
+            }
+
+            @font-face {
+                font-family: 'Overpass-ExtraLight';
+                src: url("{{ url_for('static', filename='fonts/overpass-extralight.ttf') }}");
+            }
+
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="content">
+            <div class="section" id="forecast">
+                <h1 class="header-text">Welcome</h1>
+                <script src='https://darksky.net/map-embed/@temperature,48.922,-95.581,4.js?embed=true&timeControl=false&fieldControl=false&defaultField=temperature&defaultUnits=_f'></script>
+                            </div>
+
+            <div class="section" id="message">
+                <h1 class="header-text" id="motd-text">MOTD</h1>
+            </div>
+
+            <div class="section" id="information">
+                <h1 class="header-text">General Information</h1>
+                <ul id="proplist">
+                    <li>Room Temp: <span class="custom-bottom" id="proplist-roomtemp">error</span></li>
+                    <li>Lights: <span class="custom-bottom" id="proplist-lightstatus">error</span></li>
+                    <li>Door: <span class="custom-bottom" id="proplist-lockstatus">error</span></li>
+                </ul>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='script.js') }}" type="text/javascript"></script>
+</html>

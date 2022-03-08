@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1f1f1f;
+} #header {
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-color: #1f1f1f;
+    letter-spacing: 10px;
+    transition: letter-spacing 0.5s ease-in-out;
+    cursor: pointer;
+} #header:hover {
+    letter-spacing: 3px;
+} #content-flexbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 400px;
+    transition: filter 1.5s ease-in-out;
+} #content-flexbox .action-content-box {
+    background-color: none;
+    padding: 30px;
+    margin: 20px;
+    cursor: pointer;
+    letter-spacing: -2px;
+    text-align: center;
+    transition: color,background-color 250ms ease-in-out;
+} #content-flexbox .action-content-box:hover {
+    background-color: white;
+    color: #1f1f1f;
+} #content-flexbox .info-content-box {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: default;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+} #password-area,#message-area {
+    width: 80%;
+    padding: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2f9395;
+    box-shadow: 0px 3px 10px #1f1f1f;
+    display: none;
+    z-index: 1;
+} #password-area h3,#message-area h3 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+} #password-area input,#message-area input {
+    border: none;
+    border-bottom: 1px white solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 20px;
+    width: 60%;
+    font-size: 36px;
+    background: none;
+} #password-area input:focus,#message-area input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px white solid;
+} #password-area button,#message-area button {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color,background-color 250ms ease-in-out;
+} #password-area button:hover,#message-area button:hover {
+    background-color: white;
+    color: #1f1f1f;
+}

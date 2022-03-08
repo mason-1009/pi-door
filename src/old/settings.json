@@ -1,0 +1,8 @@
+{
+    "servo-pin-number": 18,
+    "debug": true,
+    "reed-switch-pin": 16,
+    "fcgi-pipe": "/tmp/fcgi-pipe.sock",
+    "auth-username": "door-admin",
+    "auth-hashed-pass": ""
+}

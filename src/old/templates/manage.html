@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>STEM Door Control</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='manage.css') }}" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>STEM Door Control</h1>
+        </div>
+        <div id="content-flexbox">
+            <div class="action-content-box">
+                <h2>Unlock</h2>
+            </div>
+            <div class="action-content-box">
+                <h2>Lock</h2>
+            </div>
+            <div class="action-content-box">
+                <h2>Take Picture</h2>
+            </div>
+            <div class="action-content-box">
+                <h2>Reset Message</h2>
+            </div>
+            <div class="action-content-box" onclick="openMessagePrompt();">
+                <h2>Send Message</h2>
+            </div>
+            <div class="action-content-box" onclick="toggleInfoPanelVisibility();">
+                <h2>Show Info</h2>
+            </div>
+            <div class="info-content-box">
+                <h3>The temperature is <span id="info-temp">unset</span> degrees.</h3>
+                <h3>The door is <span id="info-door">unset</span> and <span id="info-lock">unset</span>.</h3>
+            </div>
+        </div>
+        <div id="popup-area">
+            <div id="password-area">
+                <h3>Enter Password</h3>
+                <input type="password" id="passfield">
+                <button id="password-submit" onclick="passwordSubmit();">Authenticate</button>
+            </div>
+            <div id="message-area">
+                <h3>Enter Message</h3>
+                <input id="messagefield">
+                <button id="message-submit" onclick="messageSubmit();">Send</button>
+        </div>
+    <script src="{{ url_for('static', filename='manage.js') }}"></script>
+    </body>
+</html>

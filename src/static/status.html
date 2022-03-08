@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>A.I. Entry Info</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/style/status.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'Overpass';
+                src: url("/static/fonts/overpass-regular.ttf");
+            }
+
+
+            @font-face {
+                font-family: 'Overpass-Light';
+                src: url("/static/fonts/overpass-light.ttf");
+            }
+
+            @font-face {
+                font-family: 'Overpass-Thin';
+                src: url("/static/fonts/overpass-thin.ttf");
+            }
+
+            @font-face {
+                font-family: 'Overpass-ExtraLight';
+                src: url("/static/fonts/overpass-extralight.ttf");
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="section" id="forecast">
+                <h1 class="header-text">Welcome</h1>
+                <script src='https://darksky.net/map-embed/@temperature,48.922,-95.581,4.js?embed=true&timeControl=false&fieldControl=false&defaultField=temperature&defaultUnits=_f'></script>
+                            </div>
+
+            <div class="section" id="infograph">
+		<canvas id="climate-chart"></canvas>
+            </div>
+
+            <div class="section" id="message">
+                <h1 class="header-text" id="motd-text">MOTD</h1>
+            </div>
+
+            <div class="section" id="information">
+                <h1 class="header-text">General Information</h1>
+                <ul id="proplist">
+                    <li>Room Temp: <span class="custom-bottom" id="proplist-roomtemp">error</span></li>
+		    <li>Room Humidity: <span class="custom-bottom" id="proplist-roomhumidity">error</span></li>
+                    <li>Door: <span class="custom-bottom" id="proplist-lockstatus">error</span></li>
+                    <li>Auto-Lock: <span class="custom-bottom" id="proplist-autolock">error</span></li>
+                </ul>
+        </div>
+        <script src="/static/scripts/status.js" type="text/javascript"></script>
+    </body>
+</html>
